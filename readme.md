@@ -1,10 +1,48 @@
 ## Task
 Create simple "URL shortener" PHP web application.
 
-## Details
+## Details of task
 <p>The main (perhaps only) page would be simple form, where you put in the complete URL, and after submitting the website will give you shortlink URL.</p> 
 <p>Then, if you use this short URL, you will be redirected to the original long URL For example, when I put in address "https://medium.com/@nykolas.z/dns-resolvers-performance-compared-cloudflare-x-google-x-quad9-x-opendns-149e803734e5" and it will give me URL "http://localhost/d8aj4s" When i open another tab and put in URL "http://localhost/d8aj4s", i should be redirected to URL "https://medium.com/@nykolas.z/dns-resolvers-performance-compared-cloudflare-x-google-x-quad9-x-opendns-149e803734e5" Store data in SQL database. </p>
 <p>Use your favorite PHP framework. The app needs to be ready for production (reasonably optimized, safe) The output is zipped source code with installation instructions (including SQL script for creating database schema)</p>
+
+## Server requirements
+
+
+    PHP >= 7.1.3
+    OpenSSL PHP Extension
+    PDO PHP Extension
+    Mbstring PHP Extension
+    Tokenizer PHP Extension
+    XML PHP Extension
+    Ctype PHP Extension
+    JSON PHP Extension
+
+
+## Instruction
+
+<ol>
+<li>Clone</li>
+<pre>git clone https://github.com/masati/shortener.git shortener</pre>
+<li>Run your webserver</li>
+<li>Installing Laravel</li>
+Laravel utilizes Composer to manage its dependencies. So, before using Laravel, make sure you have Composer installed on your machine.
+
+Execute
+<pre>composer install</pre>
+in the root project folder.
+<li>Configuration</li>
+<pre>@php -r \"file_exists('.env') || copy('.env.example', '.env');\"</pre>
+Set your environment variables in '.env' file. 
+
+Generate the application key:
+<pre>php artisan key:generate</pre>
+
+Create database with your settings.
+<li>Creating table in DB</li>
+<pre>php artisan migrate</pre>
+
+</ol>
 
 <p align="center"><img src="https://laravel.com/assets/img/components/logo-laravel.svg"></p>
 

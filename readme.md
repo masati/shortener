@@ -32,7 +32,7 @@ Execute
 <pre>composer install</pre>
 in the root project folder.
 <li>Configuration</li>
-<pre>@php -r \"file_exists('.env') || copy('.env.example', '.env');\"</pre>
+<pre>cp -n .env.example .env</pre>
 Set your environment variables in '.env' file. 
 
 Generate the application key:
